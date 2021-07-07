@@ -24,6 +24,9 @@ public class Prato {
     @Column(nullable = false, length = 100)
     public String ingredientes;
 
-    @Column(nullable = false, length = 10)
+    @Column(nullable = false)
     public Double valor;
+
+    @Column(nullable = false)
+    public boolean vendido;
 }

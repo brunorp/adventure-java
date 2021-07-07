@@ -38,7 +38,7 @@ public class PratosControllerTest {
 
     @Test
     public void retornarSucesso_SalvarPrato(){
-        Prato prato = new Prato(2, "Ovo frito", "ovo, óleo", 10.99);
+        Prato prato = new Prato(2, "Ovo frito", "ovo, óleo", 10.99, false);
         when(pratosRepository.save(any(Prato.class))).thenReturn(prato);
         Prato pratoAtual = pratosService.salvar(prato);
 
@@ -78,7 +78,7 @@ public class PratosControllerTest {
     }
 
     private Prato retornaPrato(){
-        Prato prato = new Prato(2, "Ovo frito", "ovo, óleo", 10.99);
+        Prato prato = new Prato(2, "Ovo frito", "ovo, óleo", 10.99, false);
         return prato;
     }
 }
